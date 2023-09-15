@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                powershell "cd C:\ProgramData\Jenkins\.jenkins\workspace\Build pipeline\jennks_test"
+                powershell "cd 'C:\ProgramData\Jenkins\.jenkins\workspace\Build pipeline\jennks_test'"
                 echo "directory changed"
                 powershell "git clone https://github.com/bot-merwin/jennks_test.git"
                 echo "cloned"
