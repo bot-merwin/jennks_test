@@ -1,0 +1,14 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                echo "first stage to clone from repo"
+                powershell "mkdir ClonedRepo"
+                echo "directory created"
+                powershell "git clone https://github.com/bot-merwin/jennks_test.git"
+                echo "cloned"
+            }
+        }
+    }
+}
